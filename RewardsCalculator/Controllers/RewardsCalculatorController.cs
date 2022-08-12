@@ -22,7 +22,7 @@ namespace RewardsCalculator.Controllers
             int? rewards=0;
             foreach (var singletransaction in transaction)
             {
-                if (singletransaction.TransactionAmount>=50 && singletransaction.TransactionAmount<100)
+                if (singletransaction.TransactionAmount>=50 && singletransaction.TransactionAmount<=100)
                 {
                      rewards += ((singletransaction.TransactionAmount - 50) * 1);
                 }
