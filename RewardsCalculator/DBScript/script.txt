@@ -1,0 +1,47 @@
+Create Table Customer
+(
+CustomerID int Primary key identity,
+CustomerName varchar(50),
+Address1 varchar(50),
+Address2 varchar(50),
+City varchar(25),
+[State] varchar(50),
+Zip int
+)
+Go
+ insert into Customer values('Ron','4554 S Arcadia Greenway','AptNo#32','SaltLake City','UT',84107)
+ insert into Customer values('Robert','4554 S Arcadia Greenway','AptNo#33','SaltLake City','UT',84107)
+
+ GO
+
+create table Transactions
+(
+TransactionID int Primary key identity,
+CustomerID int foreign key references Customer(CustomerID),
+TransactionAmount int,
+TransactionDate Date
+)
+Go
+insert into Transactions values ( 2,110, DATEADD(DAY,  -10, GETDATE()) )
+insert into Transactions values ( 1,123, DATEADD(DAY,  -1, GETDATE()) )
+insert into Transactions values ( 2,45, DATEADD(DAY,  -1, GETDATE()) )
+insert into Transactions values ( 1,10, DATEADD(DAY,  -3, GETDATE()) )
+insert into Transactions values ( 2,210, DATEADD(DAY,  -10, GETDATE()) )
+insert into Transactions values ( 1,310, DATEADD(DAY,  -1, GETDATE()) )
+insert into Transactions values ( 2,410, DATEADD(DAY,  -3, GETDATE()) )
+insert into Transactions values ( 1,50, DATEADD(DAY,  -3, GETDATE()) )
+insert into Transactions values ( 2, 340, DATEADD(DAY,  -20, GETDATE()) )
+insert into Transactions values ( 1,12, DATEADD(DAY,  -10, GETDATE()) )
+insert into Transactions values ( 2,1000, DATEADD(DAY,  -80, GETDATE()) )
+insert into Transactions values ( 1,13, DATEADD(DAY,  -90, GETDATE()) )
+insert into Transactions values ( 2,20, DATEADD(DAY,  -90, GETDATE()) )
+insert into Transactions values ( 1,10, DATEADD(DAY,  -60, GETDATE()) )
+insert into Transactions values ( 2,320, DATEADD(DAY,  -23, GETDATE()) )
+insert into Transactions values ( 1,230, DATEADD(DAY,  -2, GETDATE()) )
+insert into Transactions values ( 1,10, DATEADD(DAY,  -1, GETDATE()) )
+insert into Transactions values ( 2,10, DATEADD(DAY,  -0, GETDATE()) )
+insert into Transactions values ( 2,210, DATEADD(DAY,  -234, GETDATE()) )
+insert into Transactions values ( 1,190, DATEADD(DAY,  -10, GETDATE()) )
+insert into Transactions values ( 2,180, DATEADD(DAY,  -4, GETDATE()) )
+insert into Transactions values ( 2,160, DATEADD(DAY,  -6, GETDATE()) )
+insert into Transactions values ( 2,310, DATEADD(DAY,  -3, GETDATE()) )
