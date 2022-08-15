@@ -1,4 +1,4 @@
-﻿Execute the script in your SQL Server DB
+﻿Execute the script in your SQL Server DB (Available with the name script.txt in side the DBScript folder)
 Update the connection string in the file TestContext.cs to connect to your 
 SQL Server.
 Run the application.
