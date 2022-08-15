@@ -1,3 +1,6 @@
+Create Database Test
+Go
+
 Create Table Customer
 (
 CustomerID int Primary key identity,
